@@ -139,6 +139,7 @@
         android:id="@+id/botonSiguiente"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="88dp"
         android:text="@string/siguiente"
         android:textSize="16sp"
@@ -151,9 +152,11 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="412dp"
-        android:layout_height="71dp"
+        android:layout_width="383dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/informacionDeContacto"
         android:textAlignment="center"
         android:textSize="34sp"
