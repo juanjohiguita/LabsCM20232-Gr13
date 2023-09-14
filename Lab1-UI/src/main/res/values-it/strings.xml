@@ -14,4 +14,21 @@
     <string name="mensajePais">" Il paese è obbligatorio"</string>
     <string name="mensajeBien">" I dati sono corretti"</string>
     <string name="informacionDeContacto">" Informazioni sui contatti"</string>
+    <string name="title">Dati Personali</string>
+    <string name="name">Nome</string>
+    <string name="lastname">Cognome</string>
+    <string name="gender">Genere</string>
+    <string name="male">Maschio</string>
+    <string name="female">femmina</string>
+    <string name="birthdate">Data di nascita</string>
+    <string name="next">Prossimo</string>
+    <string name="datehint">GG/MM/AAAA</string>
+    <string name="chooseeducation">Livello di istruzione</string>
+    <string name="kindereducation">Kinder</string>
+    <string name="elementaryeducation">Elementare</string>
+    <string name="highschooleducation">Superiore</string>
+    <string name="universityeducation">Università</string>
+    <string name="messagename">il nome è obbligatorio</string>
+    <string name="messagelastname">il cognome è obbligatorio</string>
+    <string name="messagebirthdate">La data di nascita è obbligatoria</string>
 </resources>
