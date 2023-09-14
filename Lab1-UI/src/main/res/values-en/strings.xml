@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Labs20232-Gr13</string>
+    <string name="correo">Mail</string>
+    <string name="ciudad">City</string>
+    <string name="pais">Country</string>
+    <string name="direccion">Address</string>
+    <string name="siguiente">Next</string>
+    <string name="numeroDeTelefono">Phone number</string>
+    <string name="seleccionarUnPais">Select a country</string>
+    <string name="seleccionarUnaCiudad">Select a city</string>
+    <string name="mensajeTelefono">Telephone number is required</string>
+    <string name="mensajeCorreo">Email is required</string>
+    <string name="mensajePais">" The country is required"</string>
+    <string name="mensajeBien">" The data is correct"</string>
+    <string name="informacionDeContacto">" Contact information"</string>
+</resources>

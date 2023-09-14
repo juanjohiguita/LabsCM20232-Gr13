@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Labs20232-Gr13</string>
+    <string name="app_name" translatable="false">Labs20232-Gr13</string>
+    <string name="numeroDeTelefono">Numero de telefono</string>
+    <string name="correo">Correo</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="pais">Pais</string>
+    <string name="direccion">Direccion</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="seleccionarUnPais">Selecciona un pais</string>
+    <string name="seleccionarUnaCiudad">Selecciona una ciudad</string>
+    <string name="mensajeTelefono">Es obligatorio el numero de telefono</string>
+    <string name="mensajeCorreo">Es obligatorio el correo</string>
+    <string name="mensajePais">Es obligatorio el pais</string>
+    <string name="mensajeBien">Los datos estan correctos</string>
+    <string name="informacionDeContacto">Información de contacto</string>
 </resources>

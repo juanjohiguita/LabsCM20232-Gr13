@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/textoTelefono"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:hint="@string/numeroDeTelefono"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/imagenTelefono"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textoCiudad"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:completionHint="@string/ciudad"
+        android:hint="@string/seleccionarUnaCiudad"
+        android:imeOptions="actionNext"
+        android:inputType="text|textAutoComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/imagenCiudad"
+        app:layout_constraintTop_toBottomOf="@+id/textoPais" />
+
+    <ImageView
+        android:id="@+id/imagenUbicacion"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenCiudad"
+        app:srcCompat="@drawable/direccion_icono" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textoPais"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:completionHint="@string/pais"
+        android:hint="@string/seleccionarUnPais"
+        android:imeOptions="actionNext"
+        android:inputType="text|textAutoComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/imagenPais"
+        app:layout_constraintTop_toBottomOf="@+id/textoCorreo" />
+
+    <ImageView
+        android:id="@+id/imagenPais"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenCorreo"
+        app:srcCompat="@drawable/pais_icono" />
+
+    <EditText
+        android:id="@+id/textoDireccion"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/direccion"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/imagenUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/textoCiudad"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/imagenCiudad"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenPais"
+        app:srcCompat="@drawable/ciudad_icono" />
+
+    <EditText
+        android:id="@+id/textoCorreo"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/correo"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/imagenCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/textoTelefono" />
+
+    <ImageView
+        android:id="@+id/imagenCorreo"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenTelefono"
+        app:srcCompat="@drawable/correo_icono" />
+
+    <ImageView
+        android:id="@+id/imagenTelefono"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/telefono_icono"
+        tools:srcCompat="@drawable/telefono_icono" />
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/siguiente"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoDireccion"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="412dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/informacionDeContacto"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

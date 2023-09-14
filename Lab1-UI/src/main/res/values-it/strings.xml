@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Labs20232-Gr13</string>
+    <string name="correo">Posta</string>
+    <string name="ciudad">Città</string>
+    <string name="siguiente">Seguente</string>
+    <string name="pais">Paese</string>
+    <string name="direccion">Indirizzo</string>
+    <string name="numeroDeTelefono">Numero di telefono</string>
+    <string name="seleccionarUnPais">Seleziona un Paese</string>
+    <string name="seleccionarUnaCiudad">Seleziona una città</string>
+    <string name="mensajeTelefono">" Il numero di telefono è obbligatorio"</string>
+    <string name="mensajeCorreo">" L'e-mail è obbligatoria"</string>
+    <string name="mensajePais">" Il paese è obbligatorio"</string>
+    <string name="mensajeBien">" I dati sono corretti"</string>
+    <string name="informacionDeContacto">" Informazioni sui contatti"</string>
+</resources>
