@@ -11,10 +11,12 @@
     <string name="seleccionarUnaCiudad">Seleziona una città</string>
     <string name="mensajeTelefono">" Il numero di telefono è obbligatorio"</string>
     <string name="mensajeCorreo">" L'e-mail è obbligatoria"</string>
+    <string name="mensajeCorreoInv">Inserire un indirizzo e-mail valido</string>
     <string name="mensajePais">" Il paese è obbligatorio"</string>
     <string name="mensajeBien">" I dati sono corretti"</string>
     <string name="informacionDeContacto">" Informazioni sui contatti"</string>
     <string name="title">Dati Personali</string>
+    <string name="birth">Nato il </string>
     <string name="name">Nome</string>
     <string name="lastname">Cognome</string>
     <string name="gender">Genere</string>
@@ -31,4 +33,6 @@
     <string name="messagename">il nome è obbligatorio</string>
     <string name="messagelastname">il cognome è obbligatorio</string>
     <string name="messagebirthdate">La data di nascita è obbligatoria</string>
+    <string name="messagenamelength">Il nome deve avere un minimo di 2 lettere e un massimo di 20 lettere</string>
+    <string name="messagelastnamelength">I cognomi devono avere un minimo di 2 lettere e un massimo di 20 lettere</string>
 </resources>

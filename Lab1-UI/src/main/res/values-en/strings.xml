@@ -11,10 +11,12 @@
     <string name="seleccionarUnaCiudad">Select a city</string>
     <string name="mensajeTelefono">Telephone number is required</string>
     <string name="mensajeCorreo">Email is required</string>
+    <string name="mensajeCorreoInv">Enter a valid email address</string>
     <string name="mensajePais">" The country is required"</string>
     <string name="mensajeBien">" The data is correct"</string>
     <string name="informacionDeContacto">" Contact information"</string>
     <string name="title">Personal Data</string>
+    <string name="birth">Born on</string>
     <string name="name">Name</string>
     <string name="lastname">Last Name</string>
     <string name="gender">Gender</string>
@@ -31,5 +33,6 @@
     <string name="messagename">Name is required</string>
     <string name="messagelastname">Last name is required</string>
     <string name="messagebirthdate">Birth date is required</string>
-
+    <string name="messagenamelength">The name must have a minimum of 2 letters and a maximum of 20 letters</string>
+    <string name="messagelastnamelength">Surnames must have a minimum of 2 letters and a maximum of 20 letters</string>
 </resources>

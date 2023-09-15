@@ -15,6 +15,7 @@ import androidx.activity.ComponentActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
+import android.content.Intent
 
 class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetListener{
 
@@ -30,7 +31,8 @@ class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetList
 
         findViewById<Button>(R.id.nextButton).setOnClickListener {
             printUserInfo()
-            // Sofi
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         val nameField = findViewById<EditText>(R.id.nameInput)
@@ -63,13 +65,19 @@ class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetList
         if(name.isNullOrEmpty()){
             Toast.makeText(this@PersonalDataActivity,R.string.messagename,Toast.LENGTH_LONG).show()
         }
+        else if(name.length < 2 || name.length > 20){
+            Toast.makeText(this@PersonalDataActivity,R.string.messagenamelength,Toast.LENGTH_LONG).show()
+        }
         else if(lastname.isNullOrEmpty()){
             Toast.makeText(this@PersonalDataActivity,R.string.messagelastname,Toast.LENGTH_LONG).show()
+        }
+        else if(lastname.length < 2 || lastname.length > 20){
+            Toast.makeText(this@PersonalDataActivity,R.string.messagelastnamelength,Toast.LENGTH_LONG).show()
         }
         else if(birthdate.isNullOrEmpty()){
             Toast.makeText(this@PersonalDataActivity,resources.getString(R.string.messagebirthdate),Toast.LENGTH_LONG).show()
         }else {
-            Log.i("My activity", "${getString(R.string.title)}: \n $name \n $lastname $gender $birthdate" +
+            Log.i("My activity", "${getString(R.string.title)}: \n $name \n $lastname $gender ${getString(R.string.birth)} $birthdate" +
                     "${if(grades == getString(R.string.chooseeducation)) "\n" else "\n $grades \n"}")
         }
     }

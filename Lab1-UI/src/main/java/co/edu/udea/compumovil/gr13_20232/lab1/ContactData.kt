@@ -2,25 +2,14 @@
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import co.edu.udea.compumovil.gr13_20232.lab1.ui.theme.Labs20232Gr13Theme
-import com.google.android.material.snackbar.Snackbar
+import android.util.Patterns
 
  class MainActivity : ComponentActivity() {
 
@@ -93,6 +82,8 @@ import com.google.android.material.snackbar.Snackbar
                 Toast.makeText(this@MainActivity, R.string.mensajeTelefono, Toast.LENGTH_LONG).show()
             }else if(textoCorreo.text.isNullOrEmpty()){
                 Toast.makeText(this@MainActivity, R.string.mensajeCorreo, Toast.LENGTH_LONG).show()
+            }else if(isEmail(textoCorreo.text.toString())){
+                Toast.makeText(this@MainActivity, R.string.mensajeCorreoInv, Toast.LENGTH_LONG).show()
             }else if(textoPais.text.isNullOrEmpty()){
                 Toast.makeText(this@MainActivity, R.string.mensajePais, Toast.LENGTH_LONG).show()
             }else{
@@ -105,5 +96,10 @@ import com.google.android.material.snackbar.Snackbar
         }
 
     }
+
+     fun isEmail(email: String): Boolean{
+         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
+     }
+
 }
 
