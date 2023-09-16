@@ -2,6 +2,7 @@
 
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
@@ -9,12 +10,16 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import android.util.Patterns
+
 
  class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val myIntent = intent // gets the previously created intent
+
+        val personalData = myIntent.getStringExtra("personalData")
 
         setContentView(R.layout.contact_data)
         val telefono: ImageView = findViewById(R.id.imagenTelefono)
@@ -82,13 +87,14 @@ import android.util.Patterns
                 Toast.makeText(this@MainActivity, R.string.mensajeTelefono, Toast.LENGTH_LONG).show()
             }else if(textoCorreo.text.isNullOrEmpty()){
                 Toast.makeText(this@MainActivity, R.string.mensajeCorreo, Toast.LENGTH_LONG).show()
-            }else if(isEmail(textoCorreo.text.toString())){
+            }else if(!isEmail(textoCorreo.text.toString())){
                 Toast.makeText(this@MainActivity, R.string.mensajeCorreoInv, Toast.LENGTH_LONG).show()
             }else if(textoPais.text.isNullOrEmpty()){
                 Toast.makeText(this@MainActivity, R.string.mensajePais, Toast.LENGTH_LONG).show()
             }else{
                 Toast.makeText(this@MainActivity, R.string.mensajeBien, Toast.LENGTH_LONG).show()
-                Log.i("My Activity", "${getString(R.string.informacionDeContacto)}: \n ${getString(R.string.numeroDeTelefono)}: ${textoTelefono.text} \n " +
+                Log.i("Información personal",personalData.toString())
+                Log.i("Información de contacto", "${getString(R.string.informacionDeContacto)}: \n ${getString(R.string.numeroDeTelefono)}: ${textoTelefono.text} \n " +
                         "${getString(R.string.direccion)}: ${textoDireccion.text} \n " +
                         "${getString(R.string.correo)}: ${textoCorreo.text} \n ${getString(R.string.pais)}: ${textoPais.text} \n" +
                         "${getString(R.string.ciudad)}: ${textoCiudad.text} \n")
@@ -97,7 +103,7 @@ import android.util.Patterns
 
     }
 
-     fun isEmail(email: String): Boolean{
+     private fun isEmail(email: String): Boolean{
          return Patterns.EMAIL_ADDRESS.matcher(email).matches()
      }
 

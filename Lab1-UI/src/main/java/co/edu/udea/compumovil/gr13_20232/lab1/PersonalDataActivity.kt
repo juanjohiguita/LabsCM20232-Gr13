@@ -2,7 +2,6 @@ package co.edu.udea.compumovil.gr13_20232.lab1
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
@@ -30,9 +29,8 @@ class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetList
         }
 
         findViewById<Button>(R.id.nextButton).setOnClickListener {
-            printUserInfo()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            checkPersonalData()
+
         }
 
         val nameField = findViewById<EditText>(R.id.nameInput)
@@ -54,7 +52,7 @@ class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetList
         findViewById<Button>(R.id.birthDate).text = formatter.format(timestamp)
     }
 
-    private fun printUserInfo(){
+    private fun checkPersonalData(){
         val name = findViewById<EditText>(R.id.nameInput).text.toString()
         val lastname = findViewById<EditText>(R.id.lastnameInput).text.toString()
         val selectedGenderId = findViewById<RadioGroup>(R.id.genderRadioButton).checkedRadioButtonId
@@ -77,8 +75,11 @@ class PersonalDataActivity : ComponentActivity(), DatePickerDialog.OnDateSetList
         else if(birthdate.isNullOrEmpty()){
             Toast.makeText(this@PersonalDataActivity,resources.getString(R.string.messagebirthdate),Toast.LENGTH_LONG).show()
         }else {
-            Log.i("My activity", "${getString(R.string.title)}: \n $name \n $lastname $gender ${getString(R.string.birth)} $birthdate" +
-                    "${if(grades == getString(R.string.chooseeducation)) "\n" else "\n $grades \n"}")
+            val personalData =  "${getString(R.string.title)}: \n $name \n $lastname $gender ${getString(R.string.birth)} $birthdate" +
+                    "${if(grades == getString(R.string.chooseeducation)) "\n" else "\n $grades \n"}"
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("personalData",personalData)
+            startActivity(intent)
         }
     }
 }
